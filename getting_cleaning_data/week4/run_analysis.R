@@ -1,5 +1,3 @@
-setwd('C:/Users/mhealy10/Documents/DSU/Data Science Specialization/UCI HAR Dataset')
-
 # Read in data
 x_test <- read.table('test/X_test.txt')
 y_test <- read.table('test/y_test.txt')
@@ -44,7 +42,7 @@ means <- combo %>%
     summarise_all(mean)
 colnames(means)[1] = 'activity'
 
-write.csv(means, 'activities.csv', row.names=FALSE)
+write.table(means, 'activities.txt', row.names=FALSE)
 
 
 
